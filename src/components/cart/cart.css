@@ -1,0 +1,35 @@
+/* Cart.css */
+.cart-items {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+}
+
+.cart-items th, .cart-items td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.cart-items th {
+    background-color: #f4f4f4;
+}
+
+.cart-items img {
+    max-width: 100px;
+    height: auto;
+}
+
+.edit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.edit-button:hover {
+    background-color: #0056b3;
+}

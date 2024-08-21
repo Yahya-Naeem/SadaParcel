@@ -1,0 +1,64 @@
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 3 products per row with auto-adjustment */
+    gap: 16px; /* Space between grid items */
+    padding: 16px;
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-description {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Number of lines to show before truncating */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 8px 0;
+    line-height: 1.4em; /* Line height for the description */
+}
+
+.product-image {
+    max-width: 200px;
+    height: auto;
+    margin-top: 8px;
+}
+
+.quantity-input {
+    width: 80px;
+    padding: 8px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.add-to-cart-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.add-to-cart-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Ensure the container aligns items in a row and handles spacing correctly */
+.product-action-container {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    gap: 10px; /* Space between the input field and the button */
+    margin-top: 16px; /* Space above the action container */
+}

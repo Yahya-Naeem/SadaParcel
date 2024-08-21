@@ -1,23 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-
+import React from 'react';
+import Dashboard from './components/dashboard/dashboard';
+import Cart from './components/cart/cart';
+import Product from './components/product/product';
+import {useRoutes} from 'react-router-dom';
+import Navbar from './components/navbar/navbar';
 function App() {
+  //using route hook for routing
+  let element = useRoutes(
+    [
+      {
+        path:"/",
+        element:<Dashboard />,
+      },
+      {
+        path:'/cart',
+        element:<Cart />,
+      },
+      { path:'/products/:productid',
+        element: <Product />
+      }
+    ]
+  )
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      {element}
     </div>
   );
 }
